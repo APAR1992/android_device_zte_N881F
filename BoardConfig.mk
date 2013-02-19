@@ -53,7 +53,7 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # chargers
-BOARD_CHARGER_RES := device/samsung/qcom-common/charger
+BOARD_CHARGER_RES := device/zte/N881F/charger
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
