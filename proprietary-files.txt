@@ -1,0 +1,74 @@
+## RIL
+system/bin/rild
+system/bin/qmuxd
+system/lib/libauth.so
+system/lib/libcm.so
+system/lib/libdiag.so
+system/lib/libdsm.so
+system/lib/libdss.so
+system/lib/libgsdi_exp.so
+system/lib/libgstk_exp.so
+system/lib/libmmgsdilib.so
+system/lib/libnv.so
+system/lib/liboncrpc.so
+system/lib/libpbmlib.so
+system/lib/libqmi.so
+system/lib/libqueue.so
+system/lib/libril-qc-1.so
+system/lib/libril-qc-qmi-1.so
+system/lib/libril-qcril-hook-oem.so
+system/lib/libril.so
+system/lib/libwms.so
+system/lib/libwmsts.so
+
+## Camera
+system/lib/liboemcamera.so
+system/lib/libmmjpeg.so
+system/lib/libmmipl.so
+
+## Bluetooth
+system/etc/init.qcom.bt.sh
+system/bin/hci_qcomm_init
+
+## Adreno 200
+system/etc/firmware/yamato_pfp.fw
+system/etc/firmware/yamato_pm4.fw
+system/lib/egl/eglsubAndroid.so
+system/lib/egl/libEGL_adreno200.so
+system/lib/egl/libGLESv1_CM_adreno200.so
+system/lib/egl/libGLESv2_adreno200.so
+system/lib/egl/libGLES_android.so
+system/lib/egl/libq3dtools_adreno200.so
+system/lib/libgsl.so
+system/lib/libOpenVG.so
+system/lib/libsc-a2xx.so
+
+## GPS
+system/lib/libcommondefs.so
+
+## OMX
+system/lib/libOmxAacDec.so
+system/lib/libOmxAacEnc.so
+system/lib/libOmxAdpcmDec.so
+system/lib/libOmxAmrDec.so
+system/lib/libOmxAmrEnc.so
+system/lib/libOmxAmrRtpDec.so
+system/lib/libOmxAmrwbDec.so
+system/lib/libOmxCore.so
+system/lib/libOmxEvrcDec.so
+system/lib/libOmxEvrcEnc.so
+system/lib/libOmxEvrcHwDec.so
+system/lib/libOmxH264Dec.so
+system/lib/libOmxIttiamVdec.so
+system/lib/libOmxIttiamVenc.so
+system/lib/libOmxMp3Dec.so
+system/lib/libOmxMpeg4Dec.so
+system/lib/libOmxOn2Dec.so
+system/lib/libOmxQcelp13Dec.so
+system/lib/libOmxQcelp13Enc.so
+system/lib/libOmxQcelpHwDec.so
+system/lib/libOmxVidEnc.so
+system/lib/libOmxVp8Dec.so
+system/lib/libOmxWmaDec.so
+system/lib/libOmxWmvDec.so
+system/lib/libOmxrv9Dec.so
