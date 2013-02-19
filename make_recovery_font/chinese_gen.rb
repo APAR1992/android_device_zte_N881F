@@ -174,7 +174,7 @@ k += run_count
 out.push(run_count | (run_val != 0 ? 0x80 : 0x00))
 out.push(0)
 # gen font data
-f = File.open('font_' + font_width + 'X' + font_height + '.h', 'w')
+f = File.open('font_' + font_width + 'x' + font_height + '.h', 'w')
 f.write("struct {\n")
 f.write("\tunsigned width;\n")
 f.write("\tunsigned height;\n")
