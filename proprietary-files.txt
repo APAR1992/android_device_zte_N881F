@@ -21,6 +21,31 @@ system/lib/libril.so
 system/lib/libwms.so
 system/lib/libwmsts.so
 
+## Modules
+
+system/lib/modules/ansi_cprng.ko
+system/lib/modules/cfg80211.ko
+system/lib/modules/dal_remotetest.ko
+system/lib/modules/evbug.ko
+system/lib/modules/gspca_main.ko
+system/lib/modules/lcd.ko
+system/lib/modules/librasdioif.ko
+system/lib/modules/mmc_block_test.ko
+system/lib/modules/mmc_test.ko
+system/lib/modules/mtd_erasepart.ko
+system/lib/modules/mtd_nandecctest.ko
+system/lib/modules/mtd_oobtest.ko
+system/lib/modules/mtd_pagetest.ko
+system/lib/modules/mtd_readtest.ko
+system/lib/modules/mtd_speedtest.ko
+system/lib/modules/mtd_stresstest.ko
+system/lib/modules/mtd_subpagetest.ko
+system/lib/modules/mtd_torturetest.ko
+system/lib/modules/scsi_wait_scan.ko
+system/lib/modules/test-iosched.ko
+system/lib/modules/volans
+system/lib/modules/wlan.ko
+
 ## Camera
 system/lib/liboemcamera.so
 system/lib/libmmjpeg.so
