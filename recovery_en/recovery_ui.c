@@ -21,7 +21,7 @@
 #include "extendedcommands.h"
 
 char* MENU_HEADERS[] = { "Tip:  Use volume to highlight; power to select.",
-						 "Made: Focus, From: www.gaojiquan.com",
+			 "Made: Focus, From: www.gaojiquan.com",
                          "",
                          NULL };
 
@@ -33,7 +33,7 @@ char* MENU_ITEMS[] = { "reboot system now",
                        "backup and restore",
                        "mounts and storage",
                        "advanced",
-					   "poweroff",
+                       "poweroff",
                        NULL };
 
 void device_ui_init(UIParameters* ui_parameters) {
