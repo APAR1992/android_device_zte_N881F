@@ -25,7 +25,7 @@ char* MENU_HEADERS[] = { "提示:音量键选择项,开机键确定.",
                          "",
                          NULL };
 
-char* MENU_ITEMS[] = { "重启至...",
+char* MENU_ITEMS[] = { "重启系统",
                        "从SD卡升级系统",
                        "利用sideload升级系统",
                        "擦除数据/恢复出厂设定",

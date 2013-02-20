@@ -93,6 +93,7 @@ PRODUCT_COPY_FILES += \
         device/zte/N881F/prebuilt/system/etc/permissions/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
         device/zte/N881F/prebuilt/system/etc/permissions/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
         device/zte/N881F/prebuilt/system/etc/permissions/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+        device/zte/N881F/prebuilt/system/etc/permissions/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
         device/zte/N881F/prebuilt/system/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
         device/zte/N881F/prebuilt/system/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
         device/zte/N881F/prebuilt/system/etc/permissions/com.qualcomm.location.vzw_library.xml:system/etc/permissions/com.qualcomm.location.vzw_library.xml \

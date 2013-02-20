@@ -249,6 +249,7 @@ static void draw_battery_top_right() {
         file_data = fgets(tmp, PATH_MAX, f);
         if (file_data != NULL) {
 			sprintf(batteryDisplay, "%s%s", tmp, "%");
+			ui_print("%s", batteryDisplay);
 		}
         fclose(f);
 
@@ -332,6 +333,8 @@ static void draw_screen_locked(void)
         for (r = 0; r < (available_rows < MAX_ROWS ? available_rows : MAX_ROWS); r++) {
             draw_text_line(start_row + r, text[(cur_row + r) % MAX_ROWS]);
         }
+
+		draw_battery_top_right();
 
     }
 }

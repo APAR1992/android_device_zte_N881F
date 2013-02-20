@@ -963,6 +963,10 @@ main(int argc, char **argv) {
 
     verify_root_and_recovery();
 
+	// focus.lau comment
+	// charing or not   : /sys/class/power_supply/battery/status
+	// battery capacity : /sys/class/power_supply/battery/capacity
+
     // If there is a radio image pending, reboot now to install it.
     maybe_install_firmware_update(send_intent);
 
