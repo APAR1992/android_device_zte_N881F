@@ -1585,7 +1585,7 @@ int verify_root_and_recovery() {
         if (st.st_mode & (S_IXUSR | S_IXGRP | S_IXOTH)) {
             ui_show_text(1);
             ret = 1;
-            if (confirm_selection("ROM may flash stock recovery on boot. Fix?", "Yes - Disable recovery flash")) {
+            if (confirm_selection("ROM 可能会在启动时刷入官方的recovery. 修复?", "是 - 禁止刷入recovery")) {
                 __system("chmod -x /system/etc/install-recovery.sh");
             }
         }
@@ -1596,7 +1596,7 @@ int verify_root_and_recovery() {
             if ((st.st_mode & (S_ISUID | S_ISGID)) != (S_ISUID | S_ISGID)) {
                 ui_show_text(1);
                 ret = 1;
-                if (confirm_selection("Root access possibly lost. Fix?", "Yes - Fix root (/system/bin/su)")) {
+                if (confirm_selection("可能会丢失ROOT权限, 修复?", "是 - 修复 root 权限 (/system/bin/su)")) {
                     __system("chmod 6755 /system/bin/su");
                 }
             }
@@ -1608,7 +1608,7 @@ int verify_root_and_recovery() {
             if ((st.st_mode & (S_ISUID | S_ISGID)) != (S_ISUID | S_ISGID)) {
                 ui_show_text(1);
                 ret = 1;
-                if (confirm_selection("Root access possibly lost. Fix?", "Yes - Fix root (/system/xbin/su)")) {
+                if (confirm_selection("可能会丢失ROOT权限, 修复?", "是 - 修复 root 权限 (/system/xbin/su)")) {
                     __system("chmod 6755 /system/xbin/su");
                 }
             }
