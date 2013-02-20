@@ -1,1 +1,23 @@
 cm10.1 for ZTE N881F
+
+---------------------------------------------------------
+Steps for building recovery only:
+
+issue commands below in a shell:
+
+cd <ANDROID_SOURCE_DIR>
+. build/envsetup.sh && lunch cm_N881F-eng
+make -j4 otatools
+make -j4 recoveryimage
+
+then you will get the newly builded img: recovery.img
+
+---------------------------------------------------------
+Steps for whole building:
+
+issue commands below in a shell:
+
+cd <ANDROID_SOURCE_DIR>
+. build/envsetup.sh && brunch N881F
+
+---------------------------------------------------------
