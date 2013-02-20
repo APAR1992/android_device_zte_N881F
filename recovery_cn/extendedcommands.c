@@ -1321,9 +1321,7 @@ void show_advanced_menu()
                                 NULL
     };
 
-    static char* list[] = { "重启recovery",
-							"重启至fastboot",
-                            "擦除dalvik缓存",
+    static char* list[] = { "擦除dalvik缓存",
                             "报告错误",
                             "按键测试",
                             "显示日志",
@@ -1331,18 +1329,17 @@ void show_advanced_menu()
                             "给sdcard分区",
                             "给外置sdcard分区",
                             "给内置sdcard分区",
-                            "启动adb",
                             NULL
     };
 
     if (!can_partition("/sdcard")) {
-        list[7] = NULL;
+        list[5] = NULL;
     }
     if (!can_partition("/external_sd")) {
-        list[8] = NULL;
+        list[6] = NULL;
     }
     if (!can_partition("/emmc")) {
-        list[9] = NULL;
+        list[7] = NULL;
     }
 
     for (;;)
@@ -1353,12 +1350,6 @@ void show_advanced_menu()
         switch (chosen_item)
         {
             case 0:
-                android_reboot(ANDROID_RB_RESTART2, 0, "recovery");
-                break;
-            case 1:
-                android_reboot(ANDROID_RB_RESTART2, 0, "fastboot");
-                break;
-            case 2:
                 if (0 != ensure_path_mounted("/data"))
                     break;
                 ensure_path_mounted("/sd-ext");
@@ -1371,10 +1362,10 @@ void show_advanced_menu()
                 }
                 ensure_path_unmounted("/data");
                 break;
-            case 3:
+            case 1:
                 handle_failure(1);
                 break;
-            case 4:
+            case 2:
             {
                 ui_print("Outputting key codes.\n");
                 ui_print("Go back to end debugging.\n");
@@ -1389,29 +1380,24 @@ void show_advanced_menu()
                 while (action != GO_BACK);
                 break;
             }
-            case 5:
+            case 3:
                 ui_printlogtail(12);
                 break;
-            case 6:
+            case 4:
                 ensure_path_mounted("/system");
                 ensure_path_mounted("/data");
                 ui_print("正在修复权限...\n");
                 __system("fix_permissions");
                 ui_print("完成!\n");
                 break;
-            case 7:
+            case 5:
                 partition_sdcard("/sdcard");
                 break;
-            case 8:
+            case 6:
                 partition_sdcard("/external_sd");
                 break;
-            case 9:
+            case 7:
                 partition_sdcard("/emmc");
-                break;
-            case 10:
-        		ui_print("Restarting adbd...\n");
-				set_usb_driver(0);
-        		set_usb_driver(1);
                 break;
         }
     }
