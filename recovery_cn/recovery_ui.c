@@ -21,7 +21,7 @@
 #include "extendedcommands.h"
 
 char* MENU_HEADERS[] = { "提示:音量键选择项,开机键确定.",
-						 "制作:Focus, 来自:www.gaojiquan.com(搞机圈)",
+			 "制作:Focus, 来自:www.gaojiquan.com(搞机圈)",
                          "",
                          NULL };
 
@@ -33,7 +33,7 @@ char* MENU_ITEMS[] = { "重启系统",
                        "备份与恢复",
                        "挂载与存储",
                        "高级选项",
-					   "关机",
+                       "关机",
                        NULL };
 
 void device_ui_init(UIParameters* ui_parameters) {
