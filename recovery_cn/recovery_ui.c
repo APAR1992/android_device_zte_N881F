@@ -33,6 +33,7 @@ char* MENU_ITEMS[] = { "重启系统",
                        "备份与恢复",
                        "挂载与存储",
                        "高级选项",
+					   "关机",
                        NULL };
 
 void device_ui_init(UIParameters* ui_parameters) {
