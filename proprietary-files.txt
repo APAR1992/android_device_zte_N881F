@@ -22,7 +22,9 @@ system/lib/libwms.so
 system/lib/libwmsts.so
 
 ## Modules
-
+system/lib/modules/ath6kl/ath6kl_sdio.ko
+system/lib/modules/ath6kl/cfg80211.ko
+system/lib/modules/volans/cfg80211.ko
 system/lib/modules/ansi_cprng.ko
 system/lib/modules/cfg80211.ko
 system/lib/modules/dal_remotetest.ko
@@ -43,7 +45,6 @@ system/lib/modules/mtd_subpagetest.ko
 system/lib/modules/mtd_torturetest.ko
 system/lib/modules/scsi_wait_scan.ko
 system/lib/modules/test-iosched.ko
-system/lib/modules/volans
 system/lib/modules/wlan.ko
 
 ## Camera

@@ -33,6 +33,8 @@ TARGET_PREBUILT_KERNEL := device/zte/N881F/kernel
 # Keymapping & UI
 RECOVERY_USE_CHINESE_FONT := true
 
+# Recovery start
+
 ifeq ($(RECOVERY_USE_CHINESE_FONT), true)
 # Chinese Graphic
 BOARD_CUSTOM_RECOVERY_UI := ../../device/zte/N881F/recovery_cn/recovery_ui.c
@@ -47,6 +49,8 @@ endif
 
 TARGET_RECOVERY_INITRC := device/zte/N881F/recovery/recovery.rc
 TARGET_RECOVERY_FSTAB := device/zte/N881F/recovery/recovery.fstab
+
+# Recovery end
 
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
