@@ -49,6 +49,7 @@
 #include "dedupe/dedupe.h"
 
 struct selabel_handle *sehandle = NULL;
+extern int get_filtered_menu_selection(char** headers, char** items, int menu_only, int initial_selection, int items_count);
 
 static const struct option OPTIONS[] = {
   { "send_intent", required_argument, NULL, 's' },
@@ -674,6 +675,42 @@ wipe_data(int confirm) {
     ui_print("数据擦除完成.\n");
 }
 
+// Advanced boot menu(boot, recovery boot, boot-loader) return 1 if chosen 'boot'
+static int
+show_advanced_boot_menu()
+{
+    static char* headers[] = {  "重启高级菜单",
+                                "",
+                                NULL
+    };
+
+    static char* list[] = { "重启系统",
+                            "重启至recovery",
+                            "重启至fastboot",
+                            NULL
+    };
+
+    for (;;)
+    {
+        int chosen_item = get_filtered_menu_selection(headers, list, 0, 0, sizeof(list) / sizeof(char*));
+        if (chosen_item == GO_BACK)
+            break;
+        switch (chosen_item)
+        {
+            case 0:
+				return 1;
+			case 1:
+				android_reboot(ANDROID_RB_RESTART2, 0, "recovery");
+				break;
+			case 2:
+				android_reboot(ANDROID_RB_RESTART2, 0, "bootloader");
+				break;
+        }
+    }
+
+	return 0;
+}
+
 int ui_menu_level = 1;
 int ui_root_menu = 0;
 static void
@@ -701,8 +738,10 @@ prompt_and_wait() {
         int status;
         switch (chosen_item) {
             case ITEM_REBOOT:
-                poweroff=0;
-                return;
+				if(show_advanced_boot_menu()){
+					poweroff = 0;
+				}
+				return;
 
             case ITEM_WIPE_DATA:
                 wipe_data(ui_text_visible());
