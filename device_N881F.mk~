@@ -101,5 +101,3 @@ PRODUCT_COPY_FILES += \
         device/zte/N881F/prebuilt/system/etc/permissions/ZteDrmClient.xml:system/etc/permissions/ZteDrmClient.xml
 
 $(call inherit-product, build/target/product/full.mk)
-
-$(call inherit-product-if-exists, vendor/zte/N881F/N881F-vendor.mk)
